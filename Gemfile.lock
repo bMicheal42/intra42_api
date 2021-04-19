@@ -1,0 +1,54 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.5)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.1.8)
+    i18n (1.8.10)
+      concurrent-ruby (~> 1.0)
+    minitest (5.14.2)
+    mono_logger (1.1.1)
+    multi_json (1.15.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    neatjson (0.9)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    redis (4.2.5)
+    redis-namespace (1.8.1)
+      redis (>= 3.0.4)
+    resque (2.0.0)
+      mono_logger (~> 1.0)
+      multi_json (~> 1.0)
+      redis-namespace (~> 1.6)
+      sinatra (>= 0.9.2)
+      vegas (~> 0.1.2)
+    ruby2_keywords (0.0.4)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    thread_safe (0.3.6)
+    tilt (2.0.10)
+    time_difference (0.7.0)
+      activesupport (~> 5.1)
+    tzinfo (1.2.9)
+      thread_safe (~> 0.1)
+    vegas (0.1.11)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  x86_64-darwin-18
+
+DEPENDENCIES
+  neatjson
+  resque
+  time_difference
+
+BUNDLED WITH
+   2.2.16
