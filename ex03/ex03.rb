@@ -32,6 +32,11 @@ begin
     i += 1
   end
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex03.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry

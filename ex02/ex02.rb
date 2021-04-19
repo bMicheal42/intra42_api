@@ -34,6 +34,11 @@ begin
   file.puts "wallets:           #{cursus['wallet']}"
   file.puts "correction_points: #{cursus['correction_point']}"
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex02.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry

@@ -37,6 +37,11 @@ begin
 
   file.puts JSON.neat_generate(parsed_json, aligned: true) # perfect lookup from bMicheal)
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex00.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry

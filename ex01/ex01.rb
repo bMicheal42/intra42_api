@@ -32,6 +32,11 @@ begin
     file.puts "login:   #{Parsed_login}"
   end
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex01.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry

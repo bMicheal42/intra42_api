@@ -36,6 +36,11 @@ begin
   arr.sort_by! { |str| [-str[0].to_i, str[1]] }
   file.puts(arr.map { |str| str.join(' ') })
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex04.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry

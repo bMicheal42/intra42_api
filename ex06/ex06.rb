@@ -102,6 +102,11 @@ begin
   dd, hh = hh.divmod(24)
   file.puts "Most logged host : #{max_host_time.host} with a logtime of %d days, %d:%.2d:%09.6f" % [dd, hh, mm, ss]
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex06.out')
+  end
+
   rescue OAuth2::Error => e
     if e.response.status == 500
       retry

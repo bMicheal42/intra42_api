@@ -54,6 +54,11 @@ begin
       file.puts "#{team[3]}\n\n"
   end
 
+  if File.zero?(file)
+    puts 'EMPTY'
+    File.delete('./ex05.out')
+  end
+
 rescue OAuth2::Error => e
   if e.response.status == 500
     retry
